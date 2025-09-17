@@ -1,0 +1,10 @@
+python manage.py runserver
+
+NOT from galeria.views import index
+path('', index),
+
+DO from galeria import views
+path('', views.index),
+
+git push origin master
+
