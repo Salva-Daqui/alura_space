@@ -1,3 +1,7 @@
+ctrl J
+
+ctrl L
+
 python manage.py runserver
 
 NOT from galeria.views import index
