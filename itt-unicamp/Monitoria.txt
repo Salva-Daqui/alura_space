@@ -1,0 +1,75 @@
+ctrl J
+
+ctrl L - limpa terminal
+
+python manage.py runserver
+
+NOT from galeria.views import index
+path('', index),
+
+DO from galeria import views
+path('', views.index),
+
+git push origin master
+
+STATIC_URL = 'static/'
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'config/static_files')]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_files')
+
+from 0:
+
+1. criar alura_space
+version -> python3, virtualenv
+
+2. criar virtualenv
+
+virtualenv <nome da venv>
+
+3. activate 
+
+linux
+source venv/bin/activate
+
+windows
+source venv/Scripts/activate
+
+deactivate
+
+4. DJANGO
+
+pip install django
+
+pip freeze (mostra requerimentos de versão para o projeto funcionar)
+
+django-admin help (mostra comandos)
+
+django-admin startproject <nome do projeto> . (cria pasta do projeto, com alguns arquivos python e em outras linguas)
+
+5. pytohn manage.py runserver
+
+shift+click no link e vamos alterar as primeiras coisas:
+    - arquivo settings.py
+        l106 LANGUAGE_CODE = 'pt-br'
+        l108 TIME_ZONE = 'America/Sao_Paulo'
+
+6. .env
+
+primeiro instale: pip install python-dotenv
+
+pip freeze para ver a versão
+
+cria um arquivo .env e nele guarda: SECRET_KEY = <chave> (sem aspas)
+
+no arquivo settings.py:
+
+from dotenv import load_dotenv
+
+...
+
+SECRET_KEY = str(os.getenv('SECRET_KEY'))
+
+
+
+
